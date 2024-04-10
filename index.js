@@ -25,11 +25,15 @@ const fetchBooks = () => {
                 <div class="card-body position-relative border border-primary">
                     <p class="card-text">${book.title}</p>
                     <p class="card-text">${book.price}</p>
-                    <button type="button" class="btn btn-primary position-absolute bottom-0">Scarta</button>
+                    <button type="button" class="btn btn-primary position-absolute bottom-0 remove">Scarta</button>
                 </div>`;
 
         col.appendChild(card);
         row.appendChild(col);
+        const button = card.querySelector(".remove");
+        button.addEventListener("click", (event) => {
+          row.removeChild(col);
+        });
       });
     })
     .catch((error) => console.log(error));
@@ -38,6 +42,3 @@ const fetchBooks = () => {
 window.onload = () => {
   fetchBooks();
 };
-
-const button = document.querySelectorAll("button");
-bu;
