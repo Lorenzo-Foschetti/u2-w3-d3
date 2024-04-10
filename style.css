@@ -1,0 +1,9 @@
+.card-img-top {
+  height: 350px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+.card-body {
+  height: 200px;
+}
